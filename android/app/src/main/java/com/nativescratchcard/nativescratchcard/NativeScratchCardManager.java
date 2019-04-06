@@ -53,14 +53,12 @@ public class NativeScratchCardManager extends ViewGroupManager<ScratchCardLayout
         card.setRevealFullAtPercent(finish);
     }
 
-
     @ReactProp(name = "enabled")
     public void setScratchEnabled(ScratchCardLayout card, boolean enabled) {
         Log.d(REACT_CLASS, "enabled");
         card.setScratchEnabled(enabled);
     }
-
-
+    
     private void onReceiveNativeEvent(final ThemedReactContext reactContext, final ScratchCardLayout card) {
         card.setScratchListener(new ScratchListener() {
             @Override

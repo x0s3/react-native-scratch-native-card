@@ -6,11 +6,11 @@ const initialState = { started: false, finished: false, progress: 0 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'started':
+    case 'STARTED':
       return { ...state, started: true };
-    case 'finish':
+    case 'FINISHED':
       return { ...state, finished: true, progress: 100 };
-    case 'progress':
+    case 'PROGRESS':
       return { ...state, progress: action.payload.progress };
     default:
       throw new Error();
@@ -36,9 +36,7 @@ export default function App() {
         brushWidth={20}
         enabled={true}
       >
-        <Text style={styles.welcome}>
-          HEY IM YOUR JSX COMPONENT!!
-        </Text>
+        <Text style={styles.welcome}>HEY IM YOUR JSX COMPONENT!!</Text>
       </ScratchCard>
     </View>
   );
